@@ -5,6 +5,10 @@ const todo_list = document.querySelector(".todo-list");
 let arr = [];
 
 function adding() {
+     if (todo_input.value.trim() === "") {
+        alert("Please enter a task!");
+        return;
+    }
     const item = {
         id: Date.now(),
         title: todo_input.value
